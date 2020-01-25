@@ -1,0 +1,6 @@
+framework module Pods_FoodFairy {
+  umbrella header "Pods-FoodFairy-umbrella.h"
+
+  export *
+  module * { export * }
+}
