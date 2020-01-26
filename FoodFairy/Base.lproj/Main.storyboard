@@ -45,6 +45,43 @@
             </objects>
             <point key="canvasLocation" x="139" y="76"/>
         </scene>
+        <!--Meeting List View Controller-->
+        <scene sceneID="WVn-8h-NGo">
+            <objects>
+                <viewController storyboardIdentifier="MeetingListViewController" id="hje-lH-zLB" customClass="MeetingListViewController" customModule="FoodFairy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vdC-UC-SYc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OJg-qD-3bo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MeetingTableViewCell" rowHeight="90" id="76s-RJ-xy9" customClass="MeetingTableViewCell" customModule="FoodFairy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="76s-RJ-xy9" id="zrE-XZ-WIK" customClass="MeetingTableViewCell" customModule="FoodFairy" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7FQ-eI-xzZ" firstAttribute="trailing" secondItem="OJg-qD-3bo" secondAttribute="trailing" id="1Qa-U7-n3U"/>
+                            <constraint firstItem="7FQ-eI-xzZ" firstAttribute="bottom" secondItem="OJg-qD-3bo" secondAttribute="bottom" id="46n-8d-Acd"/>
+                            <constraint firstItem="OJg-qD-3bo" firstAttribute="leading" secondItem="7FQ-eI-xzZ" secondAttribute="leading" id="92p-9C-eoL"/>
+                            <constraint firstItem="OJg-qD-3bo" firstAttribute="top" secondItem="7FQ-eI-xzZ" secondAttribute="top" id="IO4-ZV-rkf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7FQ-eI-xzZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BEC-Mo-Z1w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="825"/>
+        </scene>
         <!--Add Option Controller-->
         <scene sceneID="CUt-OP-wFA">
             <objects>

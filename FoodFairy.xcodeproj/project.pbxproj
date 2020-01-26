@@ -21,6 +21,8 @@
 		BCF2A0C423DD1CF800B00302 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2A0C323DD1CF800B00302 /* Building.swift */; };
 		BCF2A0C623DD1E1400B00302 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2A0C523DD1E1400B00302 /* Meeting.swift */; };
 		BCF2A0C723DD2D3700B00302 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F0675C323DCE49C008B5DFA /* GoogleService-Info.plist */; };
+		BCF2A0C923DD529B00B00302 /* MeetingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2A0C823DD529B00B00302 /* MeetingTableViewCell.swift */; };
+		BCF2A0CB23DD542400B00302 /* MeetingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF2A0CA23DD542400B00302 /* MeetingListViewController.swift */; };
 		E0AE027E52958F028B2BB8BD /* Pods_FoodFairyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6620B7F2C6C29001DC33B2CA /* Pods_FoodFairyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		A6B353D8E786C29058514C62 /* Pods-FoodFairyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFairyTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodFairyTests/Pods-FoodFairyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BCF2A0C323DD1CF800B00302 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		BCF2A0C523DD1E1400B00302 /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		BCF2A0C823DD529B00B00302 /* MeetingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingTableViewCell.swift; sourceTree = "<group>"; };
+		BCF2A0CA23DD542400B00302 /* MeetingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingListViewController.swift; sourceTree = "<group>"; };
 		CBDAD6E9F618FB8ACFCF4FE6 /* Pods-FoodFairy-FoodFairyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFairy-FoodFairyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodFairy-FoodFairyUITests/Pods-FoodFairy-FoodFairyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFA7EB0E883E7891B90EE450 /* Pods-FoodFairy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFairy.release.xcconfig"; path = "Target Support Files/Pods-FoodFairy/Pods-FoodFairy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +162,8 @@
 				9F0675A123DCDD56008B5DFA /* Info.plist */,
 				BCF2A0C323DD1CF800B00302 /* Building.swift */,
 				BCF2A0C523DD1E1400B00302 /* Meeting.swift */,
+				BCF2A0C823DD529B00B00302 /* MeetingTableViewCell.swift */,
+				BCF2A0CA23DD542400B00302 /* MeetingListViewController.swift */,
 			);
 			path = FoodFairy;
 			sourceTree = "<group>";
@@ -422,9 +428,11 @@
 			files = (
 				BCF2A0C623DD1E1400B00302 /* Meeting.swift in Sources */,
 				9F06759823DCDD55008B5DFA /* ViewController.swift in Sources */,
+				BCF2A0C923DD529B00B00302 /* MeetingTableViewCell.swift in Sources */,
 				9F06759423DCDD55008B5DFA /* AppDelegate.swift in Sources */,
 				83F40A4D23DD1FDA00185B05 /* addOptionController.swift in Sources */,
 				9F06759623DCDD55008B5DFA /* SceneDelegate.swift in Sources */,
+				BCF2A0CB23DD542400B00302 /* MeetingListViewController.swift in Sources */,
 				BCF2A0C423DD1CF800B00302 /* Building.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

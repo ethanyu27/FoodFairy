@@ -76,7 +76,8 @@ extension ViewController {
         //      let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
         //      location.mapItem().openInMaps(launchOptions: launchOptions)
         
-        
+        let meetingView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MeetingListViewController") as! MeetingListViewController
+        self.present(meetingView, animated: true, completion: nil)
     }
     
 }
