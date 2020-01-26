@@ -19,31 +19,62 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        clearBuilding()
         
         ref = Database.database().reference()
+        databaseHandle = ref?.child("Entries").observe(.childAdded, with: {
+        (snapshot) in
+            clearBuilding()
+        })
         databaseHandle = ref?.child("Entries").observe(.childAdded, with: {
             (snapshot) in
             let event = snapshot.value as? [String]
             if let actualEvent = event {
-                var index = Int(actualEvent[0])
+                let index = Int(actualEvent[0])
                 for ind in 0...buildingList.count-1 {
                     if ind == index {
-                        buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[1], time: actualEvent[3]))
-                        print("observed")
-                        self.fillMap()
-
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "hh:mma MM/dd/yyyy"
+                        let setDate: Date! = dateFormatter.date(from: actualEvent[3])
+                        let modifiedDate = Calendar.current.date(byAdding: .hour, value: 12, to: setDate)
+                        let currentDate = Date()
+                        if currentDate > modifiedDate! {
+                            let key = snapshot.key; self.ref.child("Entries").child(key).removeValue()
+                        } else {
+                            buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[1], time: actualEvent[3]))
+                            self.fillMap()
+                        }
                     }
                 }
             }
         })
-        
-        databaseHandle2 = ref?.child("Entries").observe(.childRemoved, with: {
-            (snapshot) in
-            clearBuilding()
+    
+        databaseHandle = ref?.child("Entries").observe(.childRemoved, with: {
+        (snapshot) in
             let event = snapshot.value as? [String]
             if let actualEvent = event {
-                var index = Int(actualEvent[0])
+                let index = Int(actualEvent[0])
+                for ind in 0...buildingList.count-1 {
+                    if ind == index {
+                        var dex = 0
+                        let compare = buildingList[ind].meetings
+                        for i in 0...compare.count-1 {
+                            if compare[i].food == actualEvent[2] && compare[i].room == actualEvent[1] && compare[i].time == actualEvent[3] && compare[i].description == actualEvent[4] {
+                                dex = i
+                            }
+                        }
+                        buildingList[ind].meetings.remove(at:dex)
+                        if buildingList[ind].meetings.count == 0 {
+                            self.myMap.removeAnnotation(buildingList[ind])
+                        }
+                    }
+                }
+            }
+        })
+        /*databaseHandle2 = ref?.child("Entries").observe(.childChanged, with: {
+            (snapshot) in
+            let event = snapshot.value as? [String]
+            if let actualEvent = event {
+                let index = Int(actualEvent[0])
                 for ind in 0...buildingList.count-1 {
                     if ind == index {
                         buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[1], time: actualEvent[3]))
@@ -53,7 +84,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
                     }
                 }
             }
-        })
+        })*/
         
         myMap.delegate = self
         
@@ -71,19 +102,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         
         print("viewDidLoad called")
-        
-        fillMap()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        fillMap()
         print("viewDidAppear called")
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        fillMap()
         print("viewWillAppear called")
     }
     

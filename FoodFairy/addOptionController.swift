@@ -27,6 +27,7 @@ class addOptionController: UIViewController, UIPickerViewDelegate, UIPickerViewD
            button.layer.cornerRadius = 25.0
         
         datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .dateAndTime
         /*datePicker?.addTarget(self, action: #selector(addOptionController.dateChanged(datePicker:)), for:.valueChanged)*/
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(addOptionController.viewTapped(gestureRecognizer:)))
@@ -39,9 +40,13 @@ class addOptionController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
         let dateFormatter = DateFormatter()
-        let datePicker = UIDatePicker()
-        dateFormatter.dateFormat = "HH:mm MM/dd/yyyy"
-        Time.text = dateFormatter.string(from: datePicker.date)
+        dateFormatter.dateFormat = "hh:mma MM/dd/yyyy"
+        if datePicker != nil {
+            Time.text = dateFormatter.string(from: datePicker!.date)
+        } else {
+            let currentDate = Date()
+            Time.text = dateFormatter.string(from: currentDate)
+        }
         view.endEditing(true)
     }
     
