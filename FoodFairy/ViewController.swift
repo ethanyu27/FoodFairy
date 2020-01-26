@@ -29,7 +29,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 var index = Int(actualEvent[0])
                 for ind in 0...buildingList.count-1 {
                     if ind == index {
-                        buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[2], time: actualEvent[3]))
+                        buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[1], time: actualEvent[3]))
                         print("observed")
                         self.fillMap()
 
@@ -46,7 +46,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 var index = Int(actualEvent[0])
                 for ind in 0...buildingList.count-1 {
                     if ind == index {
-                        buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[2], time: actualEvent[3]))
+                        buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[1], time: actualEvent[3]))
                         print("observed")
                         self.fillMap()
 

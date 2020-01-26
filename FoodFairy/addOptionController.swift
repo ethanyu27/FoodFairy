@@ -38,7 +38,7 @@ class addOptionController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     
     
-    let locations = ["ARMS", "BCC", "BRNG", "CL50", "CREC", "ELLT", "FORD", "FRNY", "HAMP", "HAWK", "HOVD", "KNOY", "KRAN", "KRCH", "LWSN", "MATH", "ME", "MSEE", "MTHW", "NUCL", "PHYS", "PMU", "POTR", "PSYC", "PUSH",  "RAWL", "REC", "SHRV",  "STEW", "WALC", "WILY", "WTHR", "YONG"]
+    let locations = ["--Select--", "ARMS", "BCC", "BRNG", "CL50", "CREC", "ELLT", "FORD", "FRNY", "HAMP", "HAWK", "HOVD", "KNOY", "KRAN", "KRCH", "LWSN", "MATH", "ME", "MSEE", "MTHW", "NUCL", "PHYS", "PMU", "POTR", "PSYC", "PUSH",  "RAWL", "REC", "SHRV",  "STEW", "WALC", "WILY", "WTHR", "YONG"]
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -56,7 +56,7 @@ class addOptionController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 var bldg = ""
 
 func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        bldg = "\(row)"
+        bldg = "\(row-1)"
     }
     
     
