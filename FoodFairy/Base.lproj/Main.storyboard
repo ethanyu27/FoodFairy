@@ -54,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="u1i-y3-yAG">
-                                <rect key="frame" x="84" y="10" width="246" height="397"/>
+                                <rect key="frame" x="84" y="222.5" width="246" height="397"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoP-fn-ylc">
                                         <rect key="frame" x="0.0" y="0.0" width="246" height="37"/>
@@ -121,12 +121,9 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="u1i-y3-yAG" secondAttribute="height" multiplier="123:304" id="gb6-G0-X4x"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-MF-1Ix">
-                                <rect key="frame" x="149" y="512" width="116" height="69"/>
+                                <rect key="frame" x="149" y="669.5" width="116" height="58"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <state key="normal" title="Submit">
@@ -140,14 +137,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TRS-MF-1Ix" firstAttribute="centerX" secondItem="bXy-AD-y9M" secondAttribute="centerX" id="1U4-r9-2KD"/>
-                            <constraint firstItem="oY2-NO-cbc" firstAttribute="bottom" secondItem="TRS-MF-1Ix" secondAttribute="bottom" constant="26" id="8Yq-DS-VdF"/>
-                            <constraint firstItem="oY2-NO-cbc" firstAttribute="trailing" secondItem="u1i-y3-yAG" secondAttribute="trailing" constant="84" id="9ZM-sY-AdI"/>
-                            <constraint firstItem="u1i-y3-yAG" firstAttribute="top" secondItem="oY2-NO-cbc" secondAttribute="top" constant="10" id="FVH-NM-2sv"/>
-                            <constraint firstItem="u1i-y3-yAG" firstAttribute="top" secondItem="oY2-NO-cbc" secondAttribute="top" constant="10" id="S1o-gM-At1"/>
-                            <constraint firstItem="TRS-MF-1Ix" firstAttribute="top" secondItem="u1i-y3-yAG" secondAttribute="bottom" constant="105" id="Xu7-Q2-ZmS"/>
-                            <constraint firstItem="u1i-y3-yAG" firstAttribute="leading" secondItem="oY2-NO-cbc" secondAttribute="leading" constant="84" id="j8X-yc-AAI"/>
-                            <constraint firstItem="oY2-NO-cbc" firstAttribute="bottom" secondItem="u1i-y3-yAG" secondAttribute="bottom" constant="200" id="w4j-Pg-9xw"/>
+                            <constraint firstItem="u1i-y3-yAG" firstAttribute="centerY" secondItem="bXy-AD-y9M" secondAttribute="centerY" id="D6T-3F-fKV"/>
+                            <constraint firstItem="TRS-MF-1Ix" firstAttribute="top" secondItem="u1i-y3-yAG" secondAttribute="bottom" constant="50" id="mDO-4i-v5j"/>
+                            <constraint firstItem="TRS-MF-1Ix" firstAttribute="centerX" secondItem="bXy-AD-y9M" secondAttribute="centerX" id="p5u-3a-NNz"/>
+                            <constraint firstItem="u1i-y3-yAG" firstAttribute="centerX" secondItem="bXy-AD-y9M" secondAttribute="centerX" id="pt3-ge-o82"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oY2-NO-cbc"/>
                     </view>

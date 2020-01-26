@@ -8,18 +8,18 @@
 
 import Foundation
 import MapKit
+import Contacts
 
 class Building: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
-    
+    let title: String?
     let code: String?
-    let name: String?
     var meetings: [Meeting]
     
-    init(coordinate: CLLocationCoordinate2D, code: String?, name: String?, meetings: [Meeting]) {
+    init(coordinate: CLLocationCoordinate2D, code: String?, title: String?, meetings: [Meeting]) {
         self.coordinate = coordinate
         self.code = code
-        self.name = name
+        self.title = title
         self.meetings = meetings
         
         super.init()
@@ -34,4 +34,14 @@ class Building: NSObject, MKAnnotation {
         //allMeetings = allMeetings[..<len]
         return allMeetings
     }
+    
+    // Annotation right callout accessory opens this mapItem in Maps app
+    func mapItem() -> MKMapItem {
+      let addressDict = [CNPostalAddressStreetKey: subtitle!]
+      let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict)
+      let mapItem = MKMapItem(placemark: placemark)
+      mapItem.name = title
+      return mapItem
+    }
+
 }
