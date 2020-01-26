@@ -12,6 +12,7 @@ import FirebaseDatabase
 class addOptionController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
    
     var ref: DatabaseReference!
+    private var datePicker: UIDatePicker?
 @IBOutlet weak var button: UIButton!
     
     
@@ -24,8 +25,30 @@ class addOptionController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
 
            button.layer.cornerRadius = 25.0
+        
+        datePicker = UIDatePicker()
+        /*datePicker?.addTarget(self, action: #selector(addOptionController.dateChanged(datePicker:)), for:.valueChanged)*/
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(addOptionController.viewTapped(gestureRecognizer:)))
+        
+        view.addGestureRecognizer(tap)
+        
+        Time.inputView = datePicker
     
     }
+    
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
+        let dateFormatter = DateFormatter()
+        let datePicker = UIDatePicker()
+        dateFormatter.dateFormat = "HH:mm MM/dd/yyyy"
+        Time.text = dateFormatter.string(from: datePicker.date)
+        view.endEditing(true)
+    }
+    
+    /*@objc func dateChanged(datePicker: UIDatePicker) {
+        
+        view.endEditing(true)
+    }*/
     
     @IBOutlet weak var Food: UITextField!
     
@@ -64,7 +87,7 @@ func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent c
     
     
     
-    @IBAction func Submit(_ sender: Any) {
+   @IBAction func Submit(_ sender: Any) {
                 
         
         let food = Food.text
@@ -85,6 +108,6 @@ self.ref.child("Entries").childByAutoId().setValue([bldg, roomnum, food, time, d
         }
         
     }
-    
+        
 }
 
