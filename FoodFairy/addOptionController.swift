@@ -7,11 +7,18 @@
 //
 
 import SwiftUI
+import FirebaseDatabase
 
 class addOptionController: UIViewController {
    
+    var ref: DatabaseReference!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+    
     }
     
     @IBOutlet weak var Food: UITextField!
@@ -30,7 +37,7 @@ class addOptionController: UIViewController {
         let description = Description.text
         let roomnum = RoomNumber.text
         
-        
+        self.ref.child("Entries").childByAutoId().setValue([bldg, roomnum, food, time, description])
         
     }
     
