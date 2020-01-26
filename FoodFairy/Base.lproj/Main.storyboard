@@ -63,7 +63,48 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="76s-RJ-xy9" id="zrE-XZ-WIK" customClass="MeetingTableViewCell" customModule="FoodFairy" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y5L-4Q-mlH">
+                                                    <rect key="frame" x="80" y="35" width="254" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqQ-bP-TYd">
+                                                            <rect key="frame" x="0.0" y="0.0" width="88" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfi-bZ-RlB">
+                                                            <rect key="frame" x="98" y="0.0" width="59" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frw-99-Don">
+                                                            <rect key="frame" x="167" y="0.0" width="39" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE2-2q-NIW">
+                                                            <rect key="frame" x="216" y="0.0" width="38" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="y5L-4Q-mlH" firstAttribute="centerX" secondItem="zrE-XZ-WIK" secondAttribute="centerX" id="OrE-GD-Gxd"/>
+                                                <constraint firstItem="y5L-4Q-mlH" firstAttribute="centerY" secondItem="zrE-XZ-WIK" secondAttribute="centerY" id="sXX-Ov-w7C"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descLabel" destination="JqQ-bP-TYd" id="uAi-Sa-M8D"/>
+                                            <outlet property="foodLabel" destination="frw-99-Don" id="BOq-Xn-PCe"/>
+                                            <outlet property="roomLabel" destination="cfi-bZ-RlB" id="fRf-Bi-1Jg"/>
+                                            <outlet property="timeLabel" destination="hE2-2q-NIW" id="8wz-F4-DwL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -77,10 +118,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7FQ-eI-xzZ"/>
                     </view>
+                    <connections>
+                        <outlet property="meetingTableView" destination="OJg-qD-3bo" id="nfS-mp-ctC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEC-Mo-Z1w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="825"/>
+            <point key="canvasLocation" x="1037.68115942029" y="825"/>
         </scene>
         <!--Add Option Controller-->
         <scene sceneID="CUt-OP-wFA">

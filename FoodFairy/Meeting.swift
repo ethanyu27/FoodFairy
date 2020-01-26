@@ -12,10 +12,10 @@ struct Meeting {
     let food: String
     let description: String
     let buildingCode: String
-    let room: Int
+    let room: String
     let time: String
     
-    init(food: String, desc: String, room: Int, time: String, buildingCode: String) {
+    init(food: String, desc: String, room: String, time: String, buildingCode: String) {
         self.food = food
         self.description = desc
         self.room = room

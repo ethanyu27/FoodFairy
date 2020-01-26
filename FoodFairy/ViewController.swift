@@ -21,7 +21,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         //let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
         
         centerMap(location: center)
-        let meetings = [Meeting(food: "pizza", desc: "black club", room: 1112, time: "6:30", buildingCode: "LWSN")]
+        let meetings = [Meeting(food: "pizza", desc: "black club", room: "1112", time: "6:30", buildingCode: "LWSN")]
         // Do any additional setup after loading the view.
         // show artwork on map
         let building = Building(coordinate: CLLocationCoordinate2D(latitude: 40.425869, longitude: -86.908066),
@@ -77,6 +77,7 @@ extension ViewController {
         //      location.mapItem().openInMaps(launchOptions: launchOptions)
         
         let meetingView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MeetingListViewController") as! MeetingListViewController
+        
         self.present(meetingView, animated: true, completion: nil)
     }
     

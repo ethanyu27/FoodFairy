@@ -8,14 +8,39 @@
 
 import UIKit
 
-class MeetingListViewController: UIViewController {
+class MeetingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+    @IBOutlet weak var meetingTableView: UITableView!
+    
+    var thisBldgMeetings: [Meeting]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Do any additional setup after loading the view.'
+        
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return thisBldgMeetings!.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "MeetingTableViewCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MeetingTableViewCell
+        let meeting = thisBldgMeetings?[indexPath.row]
+        cell.foodLabel.text = meeting?.food
+        cell.descLabel.text = meeting?.description
+        cell.roomLabel.text = meeting?.room
+        cell.timeLabel.text = meeting?.time
+        
+        return cell
+    }
 
     /*
     // MARK: - Navigation
@@ -26,5 +51,6 @@ class MeetingListViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }

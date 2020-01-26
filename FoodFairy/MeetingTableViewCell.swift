@@ -9,7 +9,11 @@
 import UIKit
 
 class MeetingTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var roomLabel: UILabel!
+    @IBOutlet weak var foodLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
