@@ -23,6 +23,11 @@ class MeetingListViewController: UIViewController, UITableViewDataSource, UITabl
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        meetingTableView.reloadData()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return thisBldgMeetings!.count
     }

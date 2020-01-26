@@ -18,6 +18,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        clearBuilding()
         
         ref = Database.database().reference()
         databaseHandle = ref?.child("Entries").observe(.childAdded, with: {
@@ -28,6 +29,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 for ind in 0...buildingList.count {
                     if ind == index {
                         buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[2], time: actualEvent[3]))
+                        print("observed")
                     }
                 }
             }
@@ -48,8 +50,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
         myMap.addAnnotation(building)
         
         
-        print("Test")
+        print("viewDidLoad called")
         
+        fillMap()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        fillMap()
+        print("viewDidAppear called")
+
     }
     
     func centerMap(location: CLLocation) {
@@ -89,6 +99,7 @@ extension ViewController {
         }
         return view
     }
+    
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
 //        let location = view.annotation as! Building
@@ -102,6 +113,15 @@ extension ViewController {
         meetingView.thisBldgMeetings = thisBuilding.meetings
         
         self.present(meetingView, animated: true, completion: nil)
+    }
+    
+    func fillMap(){
+        for i in buildingList {
+            if i.meetings.count > 0 {
+                print(i.title)
+                myMap.addAnnotation(i)
+            }
+        }
     }
     
 }
