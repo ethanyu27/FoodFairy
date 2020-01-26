@@ -21,7 +21,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         clearBuilding()
         
         ref = Database.database().reference()
-        databaseHandle = ref?.child("Entries").observe(.childAdded, with: {
+        databaseHandle = ref?.child("Entries").observe(.childChanged, with: {
             (snapshot) in
             let event = snapshot.value as? [String]
             if let actualEvent = event {
