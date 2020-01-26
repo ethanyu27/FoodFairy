@@ -55,10 +55,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
             if let actualEvent = event {
                 let index = Int(actualEvent[0])
                 for ind in 0...buildingList.count-1 {
-                    if ind == index {
-                        let compare = buildingList[ind].meetings
-                        for i in 0...compare.count-1 {
-                            if compare[i].food == actualEvent[2] && compare[i].room == actualEvent[1] && compare[i].time == actualEvent[3] && compare[i].description == actualEvent[4] {
+                    if ind == index && buildingList[ind].meetings.count > 0 {
+                        for i in 0...buildingList[ind].meetings.count-1 {
+                            if buildingList[ind].meetings[i].food == actualEvent[2] && buildingList[ind].meetings[i].room == actualEvent[1] && buildingList[ind].meetings[i].time == actualEvent[3] && buildingList[ind].meetings[i].description == actualEvent[4] {
                                 buildingList[ind].meetings.remove(at:i)
                                 
                                 if buildingList[ind].meetings.count == 0 {

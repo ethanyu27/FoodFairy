@@ -151,7 +151,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
+                                        <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="NOA-dm-Ufd">
                                         <rect key="frame" x="0.0" y="26" width="320" height="216"/>
