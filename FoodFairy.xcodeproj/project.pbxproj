@@ -62,6 +62,7 @@
 		9F0675B523DCDD56008B5DFA /* FoodFairyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFairyUITests.swift; sourceTree = "<group>"; };
 		9F0675B723DCDD56008B5DFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F0675C323DCE49C008B5DFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F44E8DE23DD1D7A002DFD39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A6B353D8E786C29058514C62 /* Pods-FoodFairyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFairyTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodFairyTests/Pods-FoodFairyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BCF2A0C323DD1CF800B00302 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		BCF2A0C523DD1E1400B00302 /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
@@ -123,6 +124,7 @@
 		9F06758723DCDD55008B5DFA = {
 			isa = PBXGroup;
 			children = (
+				9F44E8DE23DD1D7A002DFD39 /* GoogleService-Info.plist */,
 				9F06759223DCDD55008B5DFA /* FoodFairy */,
 				9F0675A923DCDD56008B5DFA /* FoodFairyTests */,
 				9F0675B423DCDD56008B5DFA /* FoodFairyUITests */,
@@ -286,8 +288,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F44E8DF23DD1D7A002DFD39 /* GoogleService-Info.plist in Resources */,
 				9F0675A023DCDD56008B5DFA /* LaunchScreen.storyboard in Resources */,
-				9F0675C423DCE49C008B5DFA /* GoogleService-Info.plist in Resources */,
 				9F06759D23DCDD56008B5DFA /* Assets.xcassets in Resources */,
 				9F06759B23DCDD55008B5DFA /* Main.storyboard in Resources */,
 			);
