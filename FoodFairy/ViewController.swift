@@ -44,12 +44,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
         //let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
         
         centerMap(location: center)
-        let meetings = [Meeting(food: "pizza", desc: "black club", room: "1112", time: "6:30")]
+        /*let meetings = [Meeting(food: "pizza", desc: "black club", room: "1112", time: "6:30")]
         // Do any additional setup after loading the view.
         // show artwork on map
         let building = Building(coordinate: CLLocationCoordinate2D(latitude: 40.425869, longitude: -86.908066),
                                 code: "LWSN", title: "Lawson", meetings: meetings)
-        myMap.addAnnotation(building)
+        myMap.addAnnotation(building)*/
         
         
         print("viewDidLoad called")
