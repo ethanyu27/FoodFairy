@@ -135,74 +135,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="u1i-y3-yAG">
-                                <rect key="frame" x="47" y="158.5" width="320" height="525"/>
+                                <rect key="frame" x="47" y="150" width="320" height="542"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoP-fn-ylc">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Location (Building Code)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zW2-DJ-c4P">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="El9-0A-CSw">
-                                        <rect key="frame" x="0.0" y="36.5" width="320" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location (Building Code)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zW2-DJ-c4P">
-                                        <rect key="frame" x="0.0" y="73.5" width="320" height="27.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOA-dm-Ufd">
-                                        <rect key="frame" x="0.0" y="104" width="320" height="216"/>
+                                    <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="NOA-dm-Ufd">
+                                        <rect key="frame" x="0.0" y="26" width="320" height="216"/>
                                         <connections>
                                             <outlet property="dataSource" destination="lJ2-nP-h6D" id="E6B-Su-l6z"/>
                                             <outlet property="delegate" destination="lJ2-nP-h6D" id="VDi-q1-uyE"/>
                                         </connections>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKD-55-wzE">
-                                        <rect key="frame" x="0.0" y="323" width="320" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="245" width="320" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWC-xL-nOd">
-                                        <rect key="frame" x="0.0" y="350" width="320" height="34"/>
+                                        <rect key="frame" x="0.0" y="283" width="320" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoP-fn-ylc">
+                                        <rect key="frame" x="0.0" y="320" width="320" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="El9-0A-CSw">
+                                        <rect key="frame" x="0.0" y="358" width="320" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nc-6j-Pxy">
-                                        <rect key="frame" x="0.0" y="387" width="320" height="37"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <rect key="frame" x="0.0" y="395" width="320" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvP-AF-0Vt">
-                                        <rect key="frame" x="0.0" y="427" width="320" height="34"/>
+                                        <rect key="frame" x="0.0" y="433" width="320" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfX-mc-hBY">
-                                        <rect key="frame" x="0.0" y="464" width="320" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="470" width="320" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJk-T4-u2O">
-                                        <rect key="frame" x="0.0" y="491" width="320" height="34"/>
+                                        <rect key="frame" x="0.0" y="508" width="320" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-MF-1Ix">
-                                <rect key="frame" x="149" y="733.5" width="116" height="58"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-MF-1Ix">
+                                <rect key="frame" x="100" y="742" width="214" height="54.5"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Submit">
+                                            <attributes>
+                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <font key="NSFont" size="38" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <action selector="Submit:" destination="lJ2-nP-h6D" eventType="touchUpInside" id="EkC-mO-Q3G"/>
@@ -212,6 +218,8 @@
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="u1i-y3-yAG" firstAttribute="centerY" secondItem="bXy-AD-y9M" secondAttribute="centerY" id="D6T-3F-fKV"/>
+                            <constraint firstItem="TRS-MF-1Ix" firstAttribute="leading" secondItem="oY2-NO-cbc" secondAttribute="leading" constant="100" id="Zg0-s5-yhP"/>
+                            <constraint firstItem="u1i-y3-yAG" firstAttribute="top" secondItem="oY2-NO-cbc" secondAttribute="top" constant="150" id="lED-cI-V05"/>
                             <constraint firstItem="TRS-MF-1Ix" firstAttribute="top" secondItem="u1i-y3-yAG" secondAttribute="bottom" constant="50" id="mDO-4i-v5j"/>
                             <constraint firstItem="TRS-MF-1Ix" firstAttribute="centerX" secondItem="bXy-AD-y9M" secondAttribute="centerX" id="p5u-3a-NNz"/>
                             <constraint firstItem="u1i-y3-yAG" firstAttribute="centerX" secondItem="bXy-AD-y9M" secondAttribute="centerX" id="pt3-ge-o82"/>
