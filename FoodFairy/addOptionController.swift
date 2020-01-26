@@ -56,8 +56,8 @@ class addOptionController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 var bldg = ""
 
 func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-            bldg = "\(row)"
-               }
+        bldg = "\(row)"
+    }
     
     
     

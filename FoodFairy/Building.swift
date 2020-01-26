@@ -103,7 +103,7 @@ class Building: NSObject, MKAnnotation {
     
     var subtitle: String? {
         var allMeetings = ""
-        for i in 0...meetings.count-1 {
+        for i in stride(from: 0, through: (meetings.count-1), by: 1) {
             allMeetings += meetings[i].description + ", "
         }
         //let len = allMeetings.lastIndex(of: ",")
