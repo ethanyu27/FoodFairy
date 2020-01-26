@@ -106,8 +106,8 @@ class Building: NSObject, MKAnnotation {
         for i in stride(from: 0, through: (meetings.count-1), by: 1) {
             allMeetings += meetings[i].description + ", "
         }
-        //let len = allMeetings.lastIndex(of: ",")
-        //allMeetings = allMeetings[..<len]
+        let endoflist = allMeetings.count - 2
+        allMeetings = String(allMeetings.prefix(endoflist))
         return allMeetings
     }
     

@@ -115,7 +115,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     func centerMap(location: CLLocation) {
-        let radius = 1000
+        let radius = 2000
         
         let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: CLLocationDistance(radius), longitudinalMeters: CLLocationDistance(radius))
         myMap.setRegion(region, animated: true)
@@ -171,6 +171,7 @@ extension ViewController {
         for i in buildingList {
             if i.meetings.count > 0 {
                 print(i.title)
+                print(i.meetings.count)
                 myMap.addAnnotation(i)
             }
         }

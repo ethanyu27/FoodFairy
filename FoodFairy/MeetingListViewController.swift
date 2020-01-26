@@ -21,6 +21,8 @@ class MeetingListViewController: UIViewController, UITableViewDataSource, UITabl
         meetingTableView.delegate = self
         // Do any additional setup after loading the view.'
         print(thisBldgMeetings!.count)
+        meetingTableView.rowHeight = UITableView.automaticDimension
+        meetingTableView.rowHeight = 150
     }
     
     override func viewDidAppear(_ animated: Bool) {
