@@ -8,12 +8,31 @@
 
 import UIKit
 import MapKit
+import FirebaseDatabase
 
 class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var myMap: MKMapView!
     
+    var ref: DatabaseReference!
+    var databaseHandle: DatabaseHandle!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        databaseHandle = ref?.child("Entries").observe(.childAdded, with: {
+            (snapshot) in
+            let event = snapshot.value as? [String]
+            if let actualEvent = event {
+                var index = Int(actualEvent[0])
+                for ind in 0...buildingList.count {
+                    if ind == index {
+                        buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[2], time: actualEvent[3]))
+                    }
+                }
+            }
+        })
+        
         myMap.delegate = self
         
         let center = CLLocation(latitude: 40.425869, longitude: -86.908066)
