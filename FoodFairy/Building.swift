@@ -26,6 +26,12 @@ class Building: NSObject, MKAnnotation {
     }
     
     var subtitle: String? {
-        return name
+        var allMeetings = ""
+        for i in 0...meetings.count-1 {
+            allMeetings += meetings[i].description + ", "
+        }
+        //let len = allMeetings.lastIndex(of: ",")
+        //allMeetings = allMeetings[..<len]
+        return allMeetings
     }
 }

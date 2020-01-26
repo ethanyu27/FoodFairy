@@ -11,7 +11,15 @@ import Foundation
 struct Meeting {
     let food: String
     let description: String
+    let buildingCode: String
     let room: Int
-    let date: Date
-    let time: timeb
+    let time: String
+    
+    init(food: String, desc: String, room: Int, time: String, buildingCode: String) {
+        self.food = food
+        self.description = desc
+        self.room = room
+        self.buildingCode = buildingCode
+        self.time = time
+    }
 }

@@ -14,12 +14,18 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let center = CLLocation(latitude: 40.423777, longitude: 86.921277)
+        // let center = CLLocation(latitude: 40.423777, longitude: 86.921277)
         // set initial location in Honolulu
         let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
 
         centerMap(location: initialLocation)
+        let meetings = [Meeting(food: "pizza", desc: "black club", room: 1112, time: "6:30", buildingCode: "LWSN")]
         // Do any additional setup after loading the view.
+        // show artwork on map
+        let building = Building(coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661),
+                               code: "LWSN", name: "Lawson", meetings: meetings)
+        myMap.addAnnotation(building)
+
         
     print("Test")
 
