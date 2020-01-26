@@ -39,6 +39,12 @@ class addOptionController: UIViewController {
         
         self.ref.child("Entries").childByAutoId().setValue([bldg, roomnum, food, time, description])
         
+        Food.text = ""
+        Location.text = ""
+        Time.text = ""
+        Description.text = ""
+        RoomNumber.text = ""
+        
     }
     
     
