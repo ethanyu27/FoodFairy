@@ -46,6 +46,12 @@ var buildingList = [
     Building(coordinate: CLLocationCoordinate2DMake(40.427431, -86.913237), code: "WALC", title: "WALC", meetings: [Meeting]())
 ]
 
+func clearBuilding() {
+    for bld in buildingList {
+        bld.meetings = [Meeting]()
+    }
+}
+
 
 class Building: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
