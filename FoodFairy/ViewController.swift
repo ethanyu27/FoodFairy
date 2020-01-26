@@ -30,6 +30,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
                     if ind == index {
                         buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[2], time: actualEvent[3]))
                         print("observed")
+                        self.fillMap()
+
                     }
                 }
             }
@@ -60,6 +62,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
         fillMap()
         print("viewDidAppear called")
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        fillMap()
+        print("viewWillAppear called")
     }
     
     func centerMap(location: CLLocation) {

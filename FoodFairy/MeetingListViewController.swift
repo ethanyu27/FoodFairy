@@ -20,7 +20,7 @@ class MeetingListViewController: UIViewController, UITableViewDataSource, UITabl
         meetingTableView.dataSource = self
         meetingTableView.delegate = self
         // Do any additional setup after loading the view.'
-        
+        print(thisBldgMeetings!.count)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,9 +28,9 @@ class MeetingListViewController: UIViewController, UITableViewDataSource, UITabl
         meetingTableView.reloadData()
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return thisBldgMeetings!.count
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return thisBldgMeetings!.count
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return thisBldgMeetings!.count
