@@ -15,13 +15,30 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     var ref: DatabaseReference!
     var databaseHandle: DatabaseHandle!
+    var databaseHandle2: DatabaseHandle!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         clearBuilding()
         
         ref = Database.database().reference()
-        databaseHandle = ref?.child("Entries").observe(.childChanged, with: {
+        databaseHandle = ref?.child("Entries").observe(.childAdded, with: {
+            (snapshot) in
+            let event = snapshot.value as? [String]
+            if let actualEvent = event {
+                var index = Int(actualEvent[0])
+                for ind in 0...buildingList.count {
+                    if ind == index {
+                        buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[2], time: actualEvent[3]))
+                        print("observed")
+                        self.fillMap()
+
+                    }
+                }
+            }
+        })
+        
+        databaseHandle2 = ref?.child("Entries").observe(.childRemoved, with: {
             (snapshot) in
             let event = snapshot.value as? [String]
             if let actualEvent = event {
