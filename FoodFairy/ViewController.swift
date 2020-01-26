@@ -27,7 +27,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             let event = snapshot.value as? [String]
             if let actualEvent = event {
                 var index = Int(actualEvent[0])
-                for ind in 0...buildingList.count {
+                for ind in 0...buildingList.count-1 {
                     if ind == index {
                         buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[2], time: actualEvent[3]))
                         print("observed")
@@ -40,10 +40,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         databaseHandle2 = ref?.child("Entries").observe(.childRemoved, with: {
             (snapshot) in
+            clearBuilding()
             let event = snapshot.value as? [String]
             if let actualEvent = event {
                 var index = Int(actualEvent[0])
-                for ind in 0...buildingList.count {
+                for ind in 0...buildingList.count-1 {
                     if ind == index {
                         buildingList[ind].meetings.append(Meeting(food: actualEvent[2], desc: actualEvent[4], room: actualEvent[2], time: actualEvent[3]))
                         print("observed")
