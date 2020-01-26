@@ -22,22 +22,26 @@ class addOptionController: UIViewController {
     }
     
     @IBOutlet weak var Food: UITextField!
+    
     @IBOutlet weak var Location: UITextField!
-    @IBOutlet weak var Description: UITextField!
-    @IBOutlet weak var Time: UITextField!
+    
     @IBOutlet weak var RoomNumber: UITextField!
     
+    @IBOutlet weak var Time: UITextField!
+    
+    @IBOutlet weak var Description: UITextField!
     
     
     @IBAction func Submit(_ sender: Any) {
+        
         
         let food = Food.text
         let bldg = Location.text
         let time = Time.text
         let description = Description.text
         let roomnum = RoomNumber.text
-        
-        self.ref.child("Entries").childByAutoId().setValue([bldg, roomnum, food, time, description])
+self.ref.child("Entries").childByAutoId().setValue([bldg, roomnum, food, time, description])
+
         
         Food.text = ""
         Location.text = ""
@@ -45,13 +49,11 @@ class addOptionController: UIViewController {
         Description.text = ""
         RoomNumber.text = ""
         
+        self.dismiss(animated: true) {
+            
+        }
+        
     }
-    
-    
-    
-    
-    
-    
     
 }
 

@@ -22,7 +22,7 @@
                                 <rect key="frame" x="175" y="798" width="64" height="64"/>
                                 <state key="normal" image="icons8-gradient-line-64"/>
                                 <connections>
-                                    <segue destination="lJ2-nP-h6D" kind="show" id="OXP-Bu-vU3"/>
+                                    <segue destination="lJ2-nP-h6D" kind="show" id="A8I-sO-Kj6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,9 +66,6 @@
                                         <rect key="frame" x="0.0" y="40" width="246" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="Food:" destination="lJ2-nP-h6D" eventType="editingDidEnd" id="Cjd-AH-pAn"/>
-                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location (Building Code)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zW2-DJ-c4P">
                                         <rect key="frame" x="0.0" y="80" width="246" height="37"/>
@@ -80,9 +77,6 @@
                                         <rect key="frame" x="0.0" y="120" width="246" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="Location:" destination="lJ2-nP-h6D" eventType="editingDidEnd" id="Tr9-aM-LbA"/>
-                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKD-55-wzE">
                                         <rect key="frame" x="0.0" y="160" width="246" height="37"/>
@@ -105,9 +99,6 @@
                                         <rect key="frame" x="0.0" y="280" width="246" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="Time:" destination="lJ2-nP-h6D" eventType="editingDidEnd" id="Jke-xx-GHs"/>
-                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfX-mc-hBY">
                                         <rect key="frame" x="0.0" y="320" width="246" height="37"/>
@@ -134,7 +125,7 @@
                                     <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="Submit:" destination="lJ2-nP-h6D" eventType="touchUpInside" id="V8m-l2-vsX"/>
+                                    <action selector="Submit:" destination="lJ2-nP-h6D" eventType="touchUpInside" id="EkC-mO-Q3G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -153,11 +144,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6UH-3E-lKc"/>
                     <connections>
-                        <outlet property="Description" destination="PJk-T4-u2O" id="w3k-Jv-onS"/>
-                        <outlet property="Food" destination="El9-0A-CSw" id="LsI-hB-pyL"/>
-                        <outlet property="Location" destination="znd-FT-iaB" id="j16-ZF-ToJ"/>
-                        <outlet property="RoomNumber" destination="IWC-xL-nOd" id="F0G-N7-eUr"/>
-                        <outlet property="Time" destination="cvP-AF-0Vt" id="zpc-zm-cK5"/>
+                        <outlet property="Description" destination="PJk-T4-u2O" id="rT9-rP-ah0"/>
+                        <outlet property="Food" destination="El9-0A-CSw" id="TYv-Yr-0dY"/>
+                        <outlet property="Location" destination="znd-FT-iaB" id="sxq-pi-FWc"/>
+                        <outlet property="RoomNumber" destination="IWC-xL-nOd" id="pEs-XU-HlY"/>
+                        <outlet property="Time" destination="cvP-AF-0Vt" id="tjU-sl-LFh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Rt-bh-K7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
