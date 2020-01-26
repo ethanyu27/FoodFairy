@@ -19,7 +19,10 @@ class addOptionController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         super.viewDidLoad()
         ref = Database.database().reference()
         
-           
+        button.setTitleColor(UIColor.white, for: UIControl.State.normal)
+
+
+
            button.layer.cornerRadius = 25.0
     
     }
