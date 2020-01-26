@@ -19,12 +19,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        clearBuilding()
         
         ref = Database.database().reference()
-        databaseHandle = ref?.child("Entries").observe(.childAdded, with: {
+        /*databaseHandle = ref?.child("Entries").observe(.childAdded, with: {
         (snapshot) in
             clearBuilding()
-        })
+        })*/
         databaseHandle = ref?.child("Entries").observe(.childAdded, with: {
             (snapshot) in
             let event = snapshot.value as? [String]
@@ -55,17 +56,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 let index = Int(actualEvent[0])
                 for ind in 0...buildingList.count-1 {
                     if ind == index {
-                        var dex = 0
                         let compare = buildingList[ind].meetings
                         for i in 0...compare.count-1 {
                             if compare[i].food == actualEvent[2] && compare[i].room == actualEvent[1] && compare[i].time == actualEvent[3] && compare[i].description == actualEvent[4] {
-                                dex = i
+                                buildingList[ind].meetings.remove(at:i)
+                                
+                                if buildingList[ind].meetings.count == 0 {
+                                    self.myMap.removeAnnotation(buildingList[ind])
+                                }
                             }
                         }
-                        buildingList[ind].meetings.remove(at:dex)
-                        if buildingList[ind].meetings.count == 0 {
-                            self.myMap.removeAnnotation(buildingList[ind])
-                        }
+                        
                     }
                 }
             }
