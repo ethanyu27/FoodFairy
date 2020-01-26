@@ -17,13 +17,14 @@ class MeetingListViewController: UIViewController, UITableViewDataSource, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        meetingTableView.dataSource = self
+        meetingTableView.delegate = self
         // Do any additional setup after loading the view.'
         
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return thisBldgMeetings!.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

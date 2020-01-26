@@ -65,7 +65,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y5L-4Q-mlH">
-                                                    <rect key="frame" x="80" y="35" width="254" height="20.5"/>
+                                                    <rect key="frame" x="80" y="45" width="254" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqQ-bP-TYd">
                                                             <rect key="frame" x="0.0" y="0.0" width="88" height="20.5"/>
@@ -96,7 +96,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="y5L-4Q-mlH" firstAttribute="centerX" secondItem="zrE-XZ-WIK" secondAttribute="centerX" id="OrE-GD-Gxd"/>
-                                                <constraint firstItem="y5L-4Q-mlH" firstAttribute="centerY" secondItem="zrE-XZ-WIK" secondAttribute="centerY" id="sXX-Ov-w7C"/>
+                                                <constraint firstItem="y5L-4Q-mlH" firstAttribute="centerY" secondItem="zrE-XZ-WIK" secondAttribute="centerY" constant="10" id="sXX-Ov-w7C"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
