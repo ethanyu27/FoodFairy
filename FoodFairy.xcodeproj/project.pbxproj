@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04AD62AF61434CBB4BA09A71 /* Pods_FoodFairy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D5BEEC93A5C428BA752A89 /* Pods_FoodFairy.framework */; };
 		4B419145551C6544A6063CED /* Pods_FoodFairy_FoodFairyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962FFD7AC04AD4E4F85934F6 /* Pods_FoodFairy_FoodFairyUITests.framework */; };
+		83F40A4D23DD1FDA00185B05 /* addOptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F40A4C23DD1FDA00185B05 /* addOptionController.swift */; };
 		9F06759423DCDD55008B5DFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F06759323DCDD55008B5DFA /* AppDelegate.swift */; };
 		9F06759623DCDD55008B5DFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F06759523DCDD55008B5DFA /* SceneDelegate.swift */; };
 		9F06759823DCDD55008B5DFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F06759723DCDD55008B5DFA /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		42CAF69D30473B5A0A6C41EF /* Pods-FoodFairyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFairyTests.release.xcconfig"; path = "Target Support Files/Pods-FoodFairyTests/Pods-FoodFairyTests.release.xcconfig"; sourceTree = "<group>"; };
 		643AA8A4D470945EDA69747E /* Pods-FoodFairy-FoodFairyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFairy-FoodFairyUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodFairy-FoodFairyUITests/Pods-FoodFairy-FoodFairyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6620B7F2C6C29001DC33B2CA /* Pods_FoodFairyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFairyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83F40A4C23DD1FDA00185B05 /* addOptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addOptionController.swift; sourceTree = "<group>"; };
 		962FFD7AC04AD4E4F85934F6 /* Pods_FoodFairy_FoodFairyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFairy_FoodFairyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D5BEEC93A5C428BA752A89 /* Pods_FoodFairy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFairy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F06759023DCDD55008B5DFA /* FoodFairy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodFairy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,7 @@
 				9F06759923DCDD55008B5DFA /* Main.storyboard */,
 				9F06759C23DCDD56008B5DFA /* Assets.xcassets */,
 				9F06759E23DCDD56008B5DFA /* LaunchScreen.storyboard */,
+				83F40A4C23DD1FDA00185B05 /* addOptionController.swift */,
 				9F0675A123DCDD56008B5DFA /* Info.plist */,
 			);
 			path = FoodFairy;
@@ -413,6 +416,7 @@
 			files = (
 				9F06759823DCDD55008B5DFA /* ViewController.swift in Sources */,
 				9F06759423DCDD55008B5DFA /* AppDelegate.swift in Sources */,
+				83F40A4D23DD1FDA00185B05 /* addOptionController.swift in Sources */,
 				9F06759623DCDD55008B5DFA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
