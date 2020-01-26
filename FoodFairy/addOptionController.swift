@@ -12,12 +12,15 @@ import FirebaseDatabase
 class addOptionController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
    
     var ref: DatabaseReference!
-    
+@IBOutlet weak var button: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        
+           
+           button.layer.cornerRadius = 25.0
     
     }
     
@@ -30,6 +33,9 @@ class addOptionController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var Time: UITextField!
     
     @IBOutlet weak var Description: UITextField!
+    
+   
+    
     
     
     let locations = ["ARMS", "BCC", "BRNG", "CL50", "CREC", "ELLT", "FORD", "FRNY", "HAMP", "HAWK", "HOVD", "KNOY", "KRAN", "KRCH", "LWSN", "MATH", "ME", "MSEE", "MTHW", "NUCL", "PHYS", "PMU", "POTR", "PSYC", "PUSH",  "RAWL", "REC", "SHRV",  "STEW", "WALC", "WILY", "WTHR", "YONG"]

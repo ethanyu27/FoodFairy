@@ -233,6 +233,7 @@
                         <outlet property="Location" destination="NOA-dm-Ufd" id="Ql8-If-XTI"/>
                         <outlet property="RoomNumber" destination="IWC-xL-nOd" id="pEs-XU-HlY"/>
                         <outlet property="Time" destination="cvP-AF-0Vt" id="tjU-sl-LFh"/>
+                        <outlet property="button" destination="TRS-MF-1Ix" id="AlA-MQ-FeT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Rt-bh-K7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
